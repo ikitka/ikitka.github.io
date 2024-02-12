@@ -4,37 +4,57 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Arc Block</title>
-<link rel="stylesheet" href="Progress.css">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div id="container1">
-    <div id="progressBlock">
-        <div id="circle"></div>
+<div id="progress">
+    <div id="progressContainer"> <!-- Встраиваем компонент прогресса --> </div>
+
+    <div id="controlContainer">
+        <div id="controlContainerList">
+            <div id="valueContainer" class="controlContainers">
+                <input id="valueInput" type="number" min="0" max="100" value="0">
+                <label for="animateCheckbox">Value</label>
+            </div>
+            <div id="animateContainer" class="controlContainers">
+                <input id="animateCheckbox" type="checkbox">
+                <label for="animateCheckbox">Animate</label>
+            </div>
+            <div id="hideContainer" class="controlContainers">
+                <input id="hideCheckbox" type="checkbox">
+                <label for="hideCheckbox">Hide</label>
+            </div>
+        </div>
     </div>
 </div>
+<script src="components/progress/Progress.js"></script>
+<script>
+    // Создаем экземпляр прогресс-бара
+    const progress = new Progress(document.getElementById('progressContainer'), 45);
 
-<div id="container2">
-    <div id="controlBlock">
-    
-        <div id="valueContainer" class="controlContainers">
-            <input id="valueInput" min="0" max="100" value="0">
-            <label for="animateCheckbox">Value</label>
-        </div>
+    const valueInput      = document.getElementById('valueInput');
+    const animateCheckbox = document.getElementById('animateCheckbox');
+    const hideCheckbox    = document.getElementById('hideCheckbox');
 
-        <div id="animateContainer" class="controlContainers">
-            <input id="animateCheckbox" type="checkbox">
-            <label for="animateCheckbox">Animate</label>
-        </div>
-    
-        <div id="hideContainer" class="controlContainers">
-            <input id="hideCheckbox" type="checkbox">
-            <label for="hideCheckbox">Hide</label>
-        </div>
+    valueInput.addEventListener('input', () => {
+        if (valueInput.value < 0) {
+            valueInput.value = 0;
+        }
+        if (valueInput.value > 100) {
+            valueInput.value = 100;
+        }
+        progress.setValue(parseInt(valueInput.value));
+    });
 
-    </div>
-</div>
-<script src="Progress.js"></script>
+    animateCheckbox.addEventListener('change', () => {
+        progress.setAnimate(animateCheckbox.checked);
+    });
+
+    hideCheckbox.addEventListener('change', () => {
+        progress.setHide(hideCheckbox.checked);
+    });
+</script>
 
 </body>
 </html>

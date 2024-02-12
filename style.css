@@ -1,0 +1,55 @@
+
+#progressContainer {
+    width: 50%;
+    height: 100vh;
+    display: flex; /* Располагаем содержимое по центру */
+    align-items: center; /* Выравниваем по вертикали */
+    justify-content: center; /* Выравниваем по горизонтали */
+}
+
+#controlContainer {
+    width: 50%;
+    height: 100vh;
+    display: flex; /* Располагаем содержимое по центру */
+    align-items: center; /* Выравниваем по вертикали */
+    justify-content: center; /* Выравниваем по горизонтали */
+}
+
+#valueInput {
+    border-radius: 30px;
+    width: 30px;
+    font-size: 13px;
+    padding: 3px;
+    border: 1px solid #000;
+    text-align: center;
+}
+
+
+#progress {
+    width: 568px;
+    height: 320px;
+
+    margin: 0;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+}
+
+
+@media (orientation: portrait) {
+    #progressContainer {
+        width: 100%;
+        height: 50vh; 
+    }
+    #controlContainer {
+        width: 100%;
+        height: 50vh;
+    }
+
+    #progress {
+        width: 320px;
+        height: 568px;
+    }
+}
