@@ -3,16 +3,16 @@ class Progress {
   constructor(container, rad) {
     this.container = container;
     this.createProgress(rad);
-    this.circleFront = this.container.querySelector('.progressCircleFront');
+    this.circleFront = this.container.querySelector('.progress-circle-front');
     this.calculateRadius();
     this.setValue(0);
   }
 
   createProgress(rad) {
     this.container.innerHTML = `
-      <svg class="progressCircle" viewBox="0 0 ${(rad + 5) * 2} ${(rad + 5) * 2}" width="${(rad + 5) * 2}" height="${(rad + 5) * 2}">
-        <circle class="progressCircleBack" cx="${rad + 5}" cy="${rad + 5}" r="${rad}"/>
-        <circle class="progressCircleFront" cx="${rad + 5}" cy="${rad + 5}" r="${rad}"/>
+      <svg class="progress-circle" viewBox="0 0 ${(rad + 5) * 2} ${(rad + 5) * 2}" width="${(rad + 5) * 2}" height="${(rad + 5) * 2}">
+        <circle class="progress-circle-back" cx="${rad + 5}" cy="${rad + 5}" r="${rad}"/>
+        <circle class="progress-circle-front" cx="${rad + 5}" cy="${rad + 5}" r="${rad}"/>
       </svg>
 
       <style>
@@ -22,7 +22,7 @@ class Progress {
             }
         }
         
-        .progressCircleFront {
+        .progress-circle-front {
             fill: none;
             stroke: #005CFF;
             stroke-width: 8px;
@@ -30,7 +30,7 @@ class Progress {
             transform-origin: center;
         }
         
-        .progressCircleBack {
+        .progress-circle-back {
             fill: none;
             stroke: #EAF0F6;
             stroke-width: 8;

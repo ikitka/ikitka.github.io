@@ -1,21 +1,42 @@
-
-#progressContainer {
-    width: 50%;
+body {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center; /* Центрирование по горизонтали */
+    align-items: center; /* Центрирование по вертикали */
     height: 100vh;
-    display: flex; /* Располагаем содержимое по центру */
-    align-items: center; /* Выравниваем по вертикали */
-    justify-content: center; /* Выравниваем по горизонтали */
+    margin: 0;
 }
 
-#controlContainer {
-    width: 50%;
-    height: 100vh;
-    display: flex; /* Располагаем содержимое по центру */
-    align-items: center; /* Выравниваем по вертикали */
-    justify-content: center; /* Выравниваем по горизонтали */
+#main-container {
+    width: 568px;
+    height: 320px;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    background-color: aquamarine;
 }
 
-#valueInput {
+
+#progress-container {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(212, 212, 159);
+}
+#control-container {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(185, 226, 187);
+}
+
+#value-input {
     border-radius: 30px;
     width: 30px;
     font-size: 13px;
@@ -24,32 +45,33 @@
     text-align: center;
 }
 
-
-#progress {
-    width: 568px;
-    height: 320px;
-
-    margin: 0;
-    padding: 10px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    box-sizing: border-box;
+/* Взял стиль устранения кнопок для инпутов числовых */
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+input[type=number] {
+  -moz-appearance: textfield; /* Устранение стилей Firefox */
 }
 
 
-@media (orientation: portrait) {
-    #progressContainer {
-        width: 100%;
-        height: 50vh; 
-    }
-    #controlContainer {
-        width: 100%;
-        height: 50vh;
-    }
 
-    #progress {
+@media (orientation: portrait) {
+    
+    #main-container  {
         width: 320px;
         height: 568px;
     }
+    
+
+    #progress-container {
+        width: 100%;
+        height: 50%;
+    }
+    #control-container {
+        width: 100%;
+        height: 50%;
+    }
+
 }

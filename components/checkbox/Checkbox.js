@@ -1,9 +1,9 @@
 
 class Checkbox {
-    constructor(container, rad) {
+    constructor(container) {
       this.container = container;
-      this.createProgress(rad);
-      this.circleFront = this.container.querySelector('.progressCircleFront');
+      this.createProgress();
+      this.checkbox = this.container.querySelector('.checkbox-custom');
       this.calculateRadius();
       this.setValue(0);
     }
@@ -16,13 +16,7 @@ class Checkbox {
         </svg>
   
         <style>
-          @keyframes rotate {
-              100% {
-                transform: rotate(360deg);
-              }
-          }
-          
-          .progressCircleFront {
+          .checkbox-custom {
               fill: none;
               stroke: #005CFF;
               stroke-width: 8px;
@@ -38,33 +32,16 @@ class Checkbox {
         </style>
       `;
     }
+
   
-    calculateRadius() {
-      this.radius = parseFloat(this.circleFront.getAttribute('r'));
-    }
-  
-    setValue(value) {
-      this.calculateRadius();
-      const diameter    = this.radius * 2;
-      const length      = Math.PI * diameter;
-      const degrees     = 180 + (value / 100) * 180;
-      const dashLength  = (degrees / 360) * length;
-      this.circleFront.style.strokeDasharray = `${dashLength} ${length}`;
-    }
-  
-    setAnimate(animate) {
-      if (animate) {
-        this.circleFront.style.animation = 'rotate 3s linear infinite';
+    setActive(active) {
+      
+      active = !active;
+
+      if (active) {
+        
       } else {
-        this.circleFront.style.animation = 'none';
-      }
-    }
-  
-    setHide(hidden) {
-      if (hidden) {
-        this.container.style.display = 'none';
-      } else {
-        this.container.style.display = '';
+        
       }
     }
   }
