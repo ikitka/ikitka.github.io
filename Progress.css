@@ -1,0 +1,25 @@
+#progressBlock {
+    width: 150px;
+    height: 150px;
+    position: relative;
+    border: 8px solid rgb(187, 187, 187);
+    border-radius: 50%;
+    
+}
+
+#circle {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    border: 8px solid blue;
+    border-radius: 50%;
+}
+
+#valueInput {
+    border-radius: 30px;
+    width: 30px;
+    font-size: 13px;
+    padding: 3px;
+    border: 1px solid #000;
+    text-align: center;
+}

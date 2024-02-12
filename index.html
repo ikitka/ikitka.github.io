@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Arc Block</title>
+<link rel="stylesheet" href="Progress.css">
+</head>
+<body>
+
+<div id="container1">
+    <div id="progressBlock">
+        <div id="circle"></div>
+    </div>
+</div>
+
+<div id="container2">
+    <div id="controlBlock">
+    
+        <div id="valueContainer" class="controlContainers">
+            <input id="valueInput" min="0" max="100" value="0">
+            <label for="animateCheckbox">Value</label>
+        </div>
+
+        <div id="animateContainer" class="controlContainers">
+            <input id="animateCheckbox" type="checkbox">
+            <label for="animateCheckbox">Animate</label>
+        </div>
+    
+        <div id="hideContainer" class="controlContainers">
+            <input id="hideCheckbox" type="checkbox">
+            <label for="hideCheckbox">Hide</label>
+        </div>
+
+    </div>
+</div>
+<script src="Progress.js"></script>
+
+</body>
+</html>
