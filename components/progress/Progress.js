@@ -4,7 +4,6 @@ class Progress {
     this.container = container;
     this.createProgress(rad, id);
     this.circleFront = this.container.querySelector(`.id-${id}`);
-    this.calculateRadius();
     this.setValue(0);
   }
 
