@@ -1,48 +1,65 @@
 body {
+    height: 100vh;
+    margin: 0;
+
     box-sizing: border-box;
     display: flex;
     justify-content: center; /* Центрирование по горизонтали */
     align-items: center; /* Центрирование по вертикали */
-    height: 100vh;
-    margin: 0;
 }
 
 #main-container {
+    padding: 20px;
+
     width: 568px;
     height: 320px;
-    padding: 10px;
+    border: 1px solid #c4c4c4;
+
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     box-sizing: border-box;
-    background-color: aquamarine;
 }
 
 
 #progress-container {
     width: 50%;
     height: 100%;
+    
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgb(212, 212, 159);
 }
 #control-container {
     width: 50%;
     height: 100%;
+    
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgb(185, 226, 187);
 }
 
 #value-input {
-    border-radius: 30px;
-    width: 30px;
-    font-size: 13px;
-    padding: 3px;
+    width: 41px;
+    height: 25px;
+    border-radius: 43px;
     border: 1px solid #000;
+    font-size: 15px;
     text-align: center;
+}
+#value-input-text {
+    margin-left: 15px;
+}
+#value-container {
+    margin: 10px;
+    margin-left: 0px;
+}
+
+#animate-checkbox {
+    display: block;
+}
+#hide-checkbox {
+    display: block;
 }
 
 /* Взял стиль устранения кнопок для инпутов числовых */
@@ -51,10 +68,6 @@ input[type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none; 
   margin: 0; 
 }
-input[type=number] {
-  -moz-appearance: textfield; /* Устранение стилей Firefox */
-}
-
 
 
 @media (orientation: portrait) {
