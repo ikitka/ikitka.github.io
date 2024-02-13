@@ -26,7 +26,7 @@ class Checkbox {
         }
         
         .checkbox-button {
-          background-color: #d2d2d2;
+          background-color: #DAE6EC;
           width: 45px;
           height: 28px;
           border-radius: 45px;
@@ -63,5 +63,4 @@ class Checkbox {
   getCheckbox() {
     return this.container.querySelector('.checkbox-input');
   }
-
 }

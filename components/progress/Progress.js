@@ -58,10 +58,10 @@ class Progress {
 
   setAnimate(animate) {
     if (animate) {
-      this.circleFront.style.animation = 'rotate 3s linear infinite';
+      this.circleFront.style.animation = 'rotate 3.5s linear infinite';
     } else {
       this.circleFront.style.webkitAnimationPlayState = 'paused'; // положение сохраняется
-      //this.circleFront.style.animation = 'none';                // положение сбрасывается
+      //this.circleFront.style.animation = 'none'; // положение сбрасывается
     }
   }
 
@@ -73,12 +73,11 @@ class Progress {
       this.container.style.visibility = 'visible';
     }
 
-    /* // а здесь скрываем элемент полностью
-    if (hidden) {
-      this.container.style.visibility = 'hidden';
-    } else {
-      this.container.style.visibility = 'visible';
-    }
-    */
+    // здесь скрываем элемент полностью со страницы
+    //if (hidden) {
+    //  this.container.style.display = 'none';
+    //} else {
+    //  this.container.style.display = '';
+    //}
   }
 }

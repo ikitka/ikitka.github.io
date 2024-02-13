@@ -17,8 +17,8 @@
                 <input id="value-input" type="number" min="0" max="100" value="0">
                 <label id="value-input-text" for="value-input">Value</label>
             </div>
-            <div id="animate-checkbox"></div>
-            <div id="hide-checkbox"></div>
+            <div id="animate-checkbox"><!-- Встраиваем сюда компонент чекбокса --></div>
+            <div id="hide-checkbox"><!-- Встраиваем сюда компонент чекбокса --></div>
         </div>
     </div>
 </div>
@@ -33,7 +33,7 @@
     const animateCheckboxContainer   = new Checkbox(document.getElementById('animate-checkbox'), 'check-1',  'Animate');
     const hideCheckboxContainer      = new Checkbox(document.getElementById('hide-checkbox'),    'check-2',  'Hide');
     
-    // передаем в переменные именно элементы чекбокса
+    // передаем именно элементы чекбокса
     const animateCheckbox   = animateCheckboxContainer.getCheckbox();
     const hideCheckbox      = hideCheckboxContainer.getCheckbox();
 

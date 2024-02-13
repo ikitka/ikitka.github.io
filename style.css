@@ -1,68 +1,56 @@
 body {
-    height: 100vh;
-    margin: 0;
-
-    box-sizing: border-box;
-    display: flex;
-    justify-content: center; /* Центрирование по горизонтали */
-    align-items: center; /* Центрирование по вертикали */
+  height: 100vh;
+  margin: 0;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #main-container {
-    padding: 20px;
-
-    width: 568px;
-    height: 320px;
-    border: 1px solid #c4c4c4;
-
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    box-sizing: border-box;
+  padding: 20px;
+  width: 568px;
+  height: 320px;
+  border: 1px solid #c4c4c4;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  box-sizing: border-box;
 }
 
 
 #progress-container {
-    width: 50%;
-    height: 100%;
-    
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 #control-container {
-    width: 50%;
-    height: 100%;
-    
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #value-input {
-    width: 41px;
-    height: 25px;
-    border-radius: 43px;
-    border: 1px solid #000;
-    font-size: 15px;
-    text-align: center;
+  width: 41px;
+  height: 25px;
+  border-radius: 43px;
+  border: 1px solid #000;
+  font-size: 15px;
+  text-align: center;
 }
 #value-input-text {
-    margin-left: 15px;
+  margin-left: 15px;
 }
 #value-container {
-    margin: 10px;
-    margin-left: 0px;
+  margin: 10px;
+  margin-left: 0px;
 }
 
-#animate-checkbox {
-    display: block;
-}
-#hide-checkbox {
-    display: block;
-}
-
-/* Взял стиль устранения кнопок для инпутов числовых */
+/* Взял стиль для устранения кнопок для инпутов числовых */
 input[type=number]::-webkit-inner-spin-button, 
 input[type=number]::-webkit-outer-spin-button { 
   -webkit-appearance: none; 
@@ -71,20 +59,17 @@ input[type=number]::-webkit-outer-spin-button {
 
 
 @media (orientation: portrait) {
-    
-    #main-container  {
-        width: 320px;
-        height: 568px;
-    }
-    
-
-    #progress-container {
-        width: 100%;
-        height: 50%;
-    }
-    #control-container {
-        width: 100%;
-        height: 50%;
-    }
-
+  #main-container  {
+    width: 320px;
+    height: 568px;
+  }
+  
+  #progress-container {
+    width: 100%;
+    height: 50%;
+  }
+  #control-container {
+    width: 100%;
+    height: 50%;
+  }
 }
